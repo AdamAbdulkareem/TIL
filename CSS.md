@@ -36,3 +36,19 @@ How `flex-shrink` interacts with item content size and container width, and what
 - `flex-shrink: 0` disables shrinking completely.
   - ❗ If the total width of the items exceeds the container, **horizontal overflow occurs**.
 
+# 📘 CSS Flexbox — Mastering Flex Item Sizing
+
+
+### Base Size (from `flex-basis`)
+- `flex-basis: auto` + `width` set → use `width`
+- `flex-basis: auto` + no `width` → use content size
+- `flex-basis: 0` → ignore content size (start from 0)
+- `flex-basis: [value]` → use given size (floored at min-content)
+
+### Space Conditions
+- **Extra space** → `flex-grow` distributes it
+- **Overflow** → `flex-shrink` reduces size (not below min-content)
+
+### Don't Want Items to Resize?
+- Use `justify-content` for spacing (e.g., `space-between`)
+- Use `margin: auto` on flex items for dynamic gaps
