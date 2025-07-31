@@ -19,3 +19,20 @@ Understanding how the `flex-grow` and `flex-basis` values influence flex item si
   - All items **start at 0** width.
   - Since all have the same grow factor, they **expand equally**.
   - Result: **Equal-width** flex items regardless of content.
+
+---
+# 📘 CSS Flexbox — Understanding `flex-shrink` and Min-Content Behavior
+
+
+## 🔍 Topic
+How `flex-shrink` interacts with item content size and container width, and what happens when shrinking is disallowed.
+
+---
+
+## 💡 Key Insight
+
+- `flex-shrink: 1` (default) allows items to shrink proportionally when the flex container is too narrow.
+- Shrinking is based on the **flex base size** (usually content width), and **never goes below the min-content size** of an item.
+- `flex-shrink: 0` disables shrinking completely.
+  - ❗ If the total width of the items exceeds the container, **horizontal overflow occurs**.
+
